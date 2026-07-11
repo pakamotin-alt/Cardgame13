@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Trump Card Game</title>
+
+
+<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+
+<body>
+
+
+<!-- Loading -->
+
+<div id="loadingScreen">
+
+    <h2>🎴 Loading Game...</h2>
+
+</div>
+
+
+
+
+
+<div class="game-container">
+
+
+
+<!-- Score -->
+
+<div class="score-board">
+
+    <div>
+        Team A:
+        <span id="scoreA">0</span>
+    </div>
+
+    <div>
+        Team B:
+        <span id="scoreB">0</span>
+    </div>
+
+</div>
+
+
+
+
+
+<!-- Trump -->
+
+<div class="trump-box">
+
+    Trump:
+    <span id="trumpSuit">-</span>
+
+</div>
+
+
+
+
+
+
+
+<!-- Table -->
+
+<div class="table">
+
+
+
+<!-- AI Partner -->
+
+<div class="player top-player">
+
+    <div class="player-name">
+        AI Partner
+    </div>
+
+    <div id="topPlayed" class="played-card"></div>
+
+</div>
+
+
+
+
+
+
+
+<!-- AI Left -->
+
+<div class="player left-player">
+
+    <div class="player-name">
+        AI Left
+    </div>
+
+    <div id="leftPlayed" class="played-card"></div>
+
+</div>
+
+
+
+
+
+
+
+
+<!-- AI Right -->
+
+<div class="player right-player">
+
+    <div class="player-name">
+        AI Right
+    </div>
+
+
+    <div id="rightPlayed" class="played-card"></div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Human Player -->
+
+<div class="player bottom-player">
+
+
+<div class="player-name">
+You
+</div>
+
+
+
+<div id="bottomPlayed" class="played-card"></div>
+
+
+
+
+<div id="playerCards" class="cards">
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Message -->
+
+<div id="messageBox"></div>
+
+
+
+
+
+
+
+
+<!-- Bid -->
+
+<div id="bidPanel" class="panel">
+
+
+<h3>
+Your Call
+</h3>
+
+
+<button id="bid7">
+7
+</button>
+
+
+<button id="bid8">
+8
+</button>
+
+
+<button id="bid9">
+9
+</button>
+
+
+<button id="bid10">
+10
+</button>
+
+
+<button id="passBtn">
+Pass
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Trump Dialog -->
+
+<div id="trumpDialog" class="dialog hidden">
+
+
+<div class="dialog-box">
+
+
+<h3>
+Choose Trump
+</h3>
+
+
+
+<button class="trumpBtn" data-suit="♠">
+♠
+</button>
+
+
+<button class="trumpBtn" data-suit="♥">
+♥
+</button>
+
+
+<button class="trumpBtn" data-suit="♦">
+♦
+</button>
+
+
+<button class="trumpBtn" data-suit="♣">
+♣
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Winner -->
+
+
+<div id="winnerScreen" class="dialog hidden">
+
+
+<div class="dialog-box">
+
+
+<h2 id="winnerName"></h2>
+
+
+<button id="restartGame">
+Restart
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<button id="restartBtn" class="restart">
+
+Restart
+
+</button>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<script type="module" src="js/main.js"></script>
+
+
+</body>
+
+</html>
